@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ name }}</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body style="background-color: #f9f9f9;">
+  <header>
+    <h1 style="color: {{ color }}">{{ name }}</h1>
+    <p>{{ description }}</p>
+  </header>
+
+  <section>
+    <h2>What We Offer</h2>
+    <ul>
+      {% for s in services %}
+        <li>{{ s }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <footer>
+    <p>📍 {{ address }} | 📧 <a href="mailto:{{ email }}">{{ email }}</a></p>
+  </footer>
+
+{% include "components/deposit_form.html" %}
+</body>
+</html>

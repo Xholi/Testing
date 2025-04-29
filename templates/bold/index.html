@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ name }}</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body style="background-color: black; color: white;">
+  <header style="background: {{ color }}; padding: 2rem;">
+    <h1>{{ name }}</h1>
+    <p>{{ description }}</p>
+  </header>
+
+  <main>
+    <h2>🔥 Our Services</h2>
+    <div>
+      {% for s in services %}
+        <p>✔️ {{ s }}</p>
+      {% endfor %}
+    </div>
+  </main>
+
+  <footer>
+    <p>📍 {{ address }} | 📧 <a style="color:white;" href="mailto:{{ email }}">{{ email }}</a></p>
+  </footer>
+</body>
+</html>

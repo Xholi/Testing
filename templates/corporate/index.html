@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ name }}</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body style="font-family: Roboto, sans-serif;">
+
+  <nav style="background: {{ color }}; padding: 1rem; color: white;">
+    <strong>{{ name }}</strong>
+  </nav>
+
+  <section style="padding: 2rem;">
+    <h1>{{ name }}</h1>
+    <p>{{ description }}</p>
+
+    <h3>Our Services</h3>
+    <ul>
+      {% for s in services %}
+        <li>{{ s }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <footer style="background: #eee; padding: 1rem;">
+    <p>📍 {{ address }} | 📧 <a href="mailto:{{ email }}">{{ email }}</a></p>
+  </footer>
+
+</body>
+</html>
